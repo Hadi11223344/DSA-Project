@@ -3,11 +3,13 @@
 
 class Account {
 private:
-    std::string id;
+    int id;
     std::string title;
     int balance;
 
 public:
-    Account(){}
-    // Getter and setter methods for Account properties
+    Account(int id, std::string title, int balance);
+    int getID();
+    std::string getTitle();
+    int getBalance();
 };
