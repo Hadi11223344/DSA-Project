@@ -21,6 +21,7 @@ public:
     void DeleteAccount();
     void TransactionHistory();
     void Exit();
-
+    void displayMenu();
+    int getUserInput();
 
 };
