@@ -15,4 +15,12 @@ private:
 
 public:
     void run();
+    void ProcessUserInput(int n);
+    void CreateAccount();
+    void MakeTransaction();
+    void DeleteAccount();
+    void TransactionHistory();
+    void Exit();
+
+
 };
