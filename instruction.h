@@ -1,11 +1,18 @@
 #pragma once
 #include <string>
 
-class Instruction {
+class Instruction
+{
 private:
-    std::string fromId;
-    std::string toId;
+    int fromId;
+    int toId;
     int amount;
     std::string description;
-    Instruction(){}
+
+public:
+    Instruction(int fID, int toID, int amt, std::string des);
+
+    int getfromId();
+    int gettoId();
+    int getAmount();
 };
