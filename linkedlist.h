@@ -1,22 +1,22 @@
 #include "transaction.h"
 #pragma once
 
-class LinkedList {
-private:
-    class Node {
-    public:
-        Transaction data;
-        Node* next;
-        Node();
-        
-        void setData(Transaction d);
-        void setNext(Node* n);
-        Transaction getData();
-        Node* getNext();
-    };
+class Node
+{
+public:
+    Transaction* data;
+    Node *next;
+    Node(int fID, int toID, int amt, std::string des, std::string typ);
+    void setNext(Node *n);
+    Transaction* getData();
+    Node *getNext();
+};
 
-    Node* head;
-    Node* tail;
+class LinkedList
+{
+private:
+    Node *head;
+    Node *tail;
 
 public:
     LinkedList();

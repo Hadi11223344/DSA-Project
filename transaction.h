@@ -1,12 +1,14 @@
 #pragma once
-#include "linkedlist.h"
+#include "instruction.h"
 #include <string>
-class Transaction {
+class Transaction
+{
 private:
     std::string type;
-    LinkedList instructions;
+    Instruction* instructions;
 
 public:
+    Transaction(int fID, int toID, int amt, std::string des, std::string  typ);
     void executeTransaction();
     void revertTransaction();
 };

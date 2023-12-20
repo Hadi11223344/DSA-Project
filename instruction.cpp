@@ -1,12 +1,5 @@
 #include "instruction.h"
 
-// class Instruction {
-// private:
-//     string fromId;
-//     string toId;
-//     int amount;
-//     string description;
-// };
 Instruction::Instruction(int fID, int tID, int amt, std::string des)
 {
     fromId = fID;

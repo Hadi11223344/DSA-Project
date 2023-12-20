@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+Program::Program() {}
+
 void Program::displayMenu()
 {
   std::cout << "Following is the menu: " << std::endl;
@@ -10,22 +12,46 @@ void Program::displayMenu()
   std::cout << "3. Transaction history " << std::endl;
   std::cout << "4. Exit " << std::endl;
 }
-int Program::getUserInput(){
-    int input = 0;
-    std::cout <<"Enter your input" << std::endl;
-    std::cin >> input;
-    return input;
+int Program::getUserInput()
+{
+  int input = 0;
+  std::cout << "Enter your input" << std::endl;
+  std::cin >> input;
+  return input;
+}
+void Program::CreateAccount()
+{
+  std::cout << "Account is created! " << std::endl;
+}
+void Program::MakeTransaction()
+{
+  std::cout << "Transaction has been made! " << std::endl;
+}
+void Program::DeleteAccount()
+{
+  std::cout << "Account has been deleted! " << std::endl;
+}
+void Program::TransactionHistory()
+{
+  std::cout << "Transaction history is shown" << std::endl;
+}
+void Program::Exit()
+{
+  std::cout << "Program exited" << std::endl;
 }
 void Program::run()
 {
-  // Program logic goes here
-  Program::displayMenu();
-  int userInput = Program::getUserInput();
-  ProcessUserInput(userInput);
-  // Based on user input, perform operations using the classes
-  // ...
-
-  // For simplicity, we'll just print a message here
+  while (true)
+  {
+    Program::displayMenu();
+    int userInput = Program::getUserInput();
+    if (userInput != 4)
+    {
+      ProcessUserInput(userInput);
+    }else{
+      break;
+    }
+  }
   cout << "Program completed successfully." << endl;
 }
 void Program::ProcessUserInput(int userInput)

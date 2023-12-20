@@ -1,24 +1,21 @@
 #include "linkedlist.h"
+#include "transaction.h"
 #include <iostream>
-
-LinkedList::Node::Node()
-{
+Node::Node(int fID, int toID, int amt, std::string des, std::string typ)
+{   
+    data = new Transaction( fID, toID,  amt, des, typ);
     next = NULL;
 }
 
-void LinkedList::Node::setData(Transaction d)
-{
-    data = d;
-}
-void LinkedList::Node::setNext(Node *n)
+void Node::setNext(Node *n)
 {
     next = n;
 }
-Transaction LinkedList::Node::getData()
+Transaction* Node::getData()
 {
     return data;
 }
-LinkedList::Node* LinkedList::Node::getNext()
+Node* Node::getNext()
 {
     return next;
 }

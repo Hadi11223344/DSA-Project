@@ -1,14 +1,10 @@
 #include "transaction.h"
 #include <iostream>
-// class Transaction {
-// private:
-//     string type;
-//     LinkedList instructions;
 
-// public:
-//     void executeTransaction();
-//     void revertTransaction();
-// };
+    Transaction::Transaction(int fID, int toID, int amt, std::string des, std::string typ){
+        instructions = new Instruction(fID, toID, amt, des);
+        type = typ;
+    }
     void Transaction::executeTransaction(){
         std::cout << "Transaction executed" << std::endl;
     }

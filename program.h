@@ -8,10 +8,9 @@ class Program {
 private:
     FileManager fileManager;
     LinkedList transactionList;
-    Account account1, account2;
-    Transaction transaction1, transaction2;
 
 public:
+    Program();
     void run();
     void ProcessUserInput(int n);
     void CreateAccount();

@@ -6,7 +6,7 @@ Account::Account(int id, std::string title, int balance){
         this->balance = balance;
 }
 
-    int Account::getBalance(){
+    int Account::getID(){
         return balance;
     }
     std::string Account::getTitle(){
