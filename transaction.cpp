@@ -1,7 +1,7 @@
 #include "transaction.h"
 #include <iostream>
 
-    Transaction::Transaction(int fID, int toID, int amt, std::string des, std::string typ){
+    Transaction::Transaction(int fID, int toID, int amt, std::string des, TransactionType typ){
         instructions = new Instruction(fID, toID, amt, des);
         type = typ;
     }

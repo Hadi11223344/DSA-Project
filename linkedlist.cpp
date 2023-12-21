@@ -1,7 +1,7 @@
 #include "linkedlist.h"
 #include "transaction.h"
 #include <iostream>
-Node::Node(int fID, int toID, int amt, std::string des, std::string typ)
+Node::Node(int fID, int toID, int amt, std::string des, TransactionType typ)
 {   
     data = new Transaction( fID, toID,  amt, des, typ);
     next = NULL;

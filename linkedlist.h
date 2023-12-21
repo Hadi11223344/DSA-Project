@@ -6,7 +6,7 @@ class Node
 public:
     Transaction* data;
     Node *next;
-    Node(int fID, int toID, int amt, std::string des, std::string typ);
+    Node(int fID, int toID, int amt, std::string des, TransactionType typ);
     void setNext(Node *n);
     Transaction* getData();
     Node *getNext();

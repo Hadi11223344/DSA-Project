@@ -4,6 +4,7 @@ Account::Account(int id, std::string title, int balance){
         this->id = id;
         this->title = title;
         this->balance = balance;
+        Transaction* transactionHistory = NULL;
 }
 
     int Account::getID(){
