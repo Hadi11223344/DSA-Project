@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 #include "transaction.h"
+#include <cstdlib> // for rand()
+#include <ctime>   // for time()
+#include <math.h>
 
 class Account {
 private:
@@ -9,8 +12,9 @@ private:
     int balance;
     Transaction* transactionHistory;
 public:
-    Account(int id, std::string title, int balance);
-    int getID();
+    Account(std::string title, int balance);
+    unsigned int getID();
     std::string getTitle();
     int getBalance();
+    unsigned int randomIdGenerator(unsigned int numDigits);
 };
