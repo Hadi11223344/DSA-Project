@@ -21,7 +21,19 @@ int Program::getUserInput()
 }
 void Program::CreateAccount()
 {
-  std::cout << "Account is created! " << std::endl;
+    
+    std::string title;
+    signed int deposit = 0;
+    std::cout << "Enter your name : " << std::endl;
+    std::cin>>title;
+    std::cout << "Enter your the initial deposit you want to make :" << std::endl;
+    std::cin >> deposit;
+    Account *account = new Account(title, deposit);
+    std::cout << "Your Account has been created successfully." << std::endl;
+    std::cout << "your account ID is : " << account->getID()<< std::endl;
+    std::cout << "your account title is : " <<account->getTitle() << std::endl;
+    std::cout << "your account Balance is : " <<account->getBalance() << std::endl;
+
 }
 void Program::MakeTransaction()
 {
