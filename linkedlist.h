@@ -1,4 +1,5 @@
 #include "transaction.h"
+#include "account.h"
 #pragma once
 
 class Node
@@ -20,7 +21,7 @@ private:
 
 public:
     LinkedList();
-    void addNode(Transaction transaction);
-    void removeNode(Transaction transaction);
+    void addNode(Account *account);
+    void removeNode(Account *account);
     void traverseList();
 };

@@ -26,11 +26,11 @@ LinkedList::LinkedList()
     tail = NULL;
 }
 
-void LinkedList::addNode(Transaction transaction)
+void LinkedList::addNode(Account *account)
 {
     std::cout << "Transaction has been added to linked list" << std::endl;
 }
-void LinkedList::removeNode(Transaction transaction)
+void LinkedList::removeNode(Account *account)
 {
     std::cout << "Transaction has been removed from linked list" << std::endl;
 }
