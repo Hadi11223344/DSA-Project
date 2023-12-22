@@ -1,7 +1,8 @@
 #include "account.h"
 
-Account::Account(std::string title, int balance)
-{
+Account::Account(std::string title, int balance, unsigned int pin)
+{   
+    this->pin = pin;
     this->id = randomIdGenerator(10);
     this->title = title;
     this->balance = balance;
@@ -19,6 +20,14 @@ std::string Account::getTitle()
 int Account::getBalance()
 {
     return balance;
+}
+unsigned int Account::getPin(){
+    return pin;
+}
+
+Transaction* Account::getTransactionHistory(){
+
+    return transactionHistory;
 }
 unsigned int Account::randomIdGenerator(unsigned int numDigits)
 {
