@@ -21,23 +21,25 @@ int Program::getUserInput()
 }
 void Program::CreateAccount()
 {
-    
-    std::string title;
-    signed int deposit = 0;
-    std::cout << "Enter your name : " << std::endl;
-    std::cin>>title;
-    std::cout << "Enter your the initial deposit you want to make :" << std::endl;
-    std::cin >> deposit;
-    Account *account = new Account(title, deposit);
-    std::cout << "Your Account has been created successfully." << std::endl;
-    std::cout << "your account ID is : " << account->getID()<< std::endl;
-    std::cout << "your account title is : " <<account->getTitle() << std::endl;
-    std::cout << "your account Balance is : " <<account->getBalance() << std::endl;
-
+  unsigned int pin = 0;
+  unsigned int deposit = 0;
+  std::string title;
+  
+  std::cout << "Enter your name : " << std::endl;
+  std::cin >> title;
+  std::cout << "Enter your the Pin for your Account (1234 - four digit pin code) : " << std::endl;
+  std::cin >> pin;
+  std::cout << "Enter your the initial deposit you want to make :" << std::endl;
+  std::cin >> deposit;
+  Account *account = new Account(title, deposit, pin);
+  std::cout << "Your Account has been created successfully." << std::endl;
+  std::cout << "your account ID is : " << account->getID() << std::endl;
+  std::cout << "your account title is : " << account->getTitle() << std::endl;
+  std::cout << "your account Balance is : " << account->getBalance() << std::endl;
 }
 void Program::MakeTransaction()
 {
-  std::cout << "Transaction has been made! " << std::endl;
+  std::cout << "Login to your account" << std::endl;
 }
 void Program::DeleteAccount()
 {
@@ -60,7 +62,9 @@ void Program::run()
     if (userInput != 4)
     {
       ProcessUserInput(userInput);
-    }else{
+    }
+    else
+    {
       break;
     }
   }
